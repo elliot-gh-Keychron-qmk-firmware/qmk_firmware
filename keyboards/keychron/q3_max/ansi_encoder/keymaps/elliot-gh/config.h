@@ -23,6 +23,7 @@
 #define PRODUCT             "Elliot Yoon's Keyboard"
 
 #define NO_ACTION_ONESHOT
+#define NO_ACTION_TAPPING
 
 #define FORCE_NKRO
 #define USB_POLLING_INTERVAL_MS 1
