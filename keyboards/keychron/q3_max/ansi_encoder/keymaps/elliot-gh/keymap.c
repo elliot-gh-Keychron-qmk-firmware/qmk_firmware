@@ -24,8 +24,9 @@ static uint8_t prev_mode_ind = RGB_MATRIX_CUSTOM_indicator_only;
 
 enum layers {
     MAC_BASE,
-    FN1,
-    WIN_BASE
+    MAC_FN,
+    WIN_BASE,
+    WIN_FN
 };
 
 enum custom_keycodes {
@@ -42,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,    KC_BSLS,    KC_DEL,   KC_END,   KC_PGDN,
         KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,              KC_ENT,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,              KC_UP,
-        KC_LCTL,  KC_LOPTN, KC_LCMMD,                               KC_SPC,                                 KC_RCMMD, MO(FN1),  KC_ROPTN,   KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LOPTN, KC_LCMMD,                               KC_SPC,                                 KC_RCMMD, MO(MAC_FN),KC_ROPTN,  KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
 
-    [FN1] = LAYOUT_tkl_ansi(
+    [MAC_FN] = LAYOUT_tkl_ansi(
         RST_DLY,  KC_BRID,  KC_BRIU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  _______,  _______,  _______,  _______,  _______,    KC_MUTE,    _______,  _______,  _______,
         _______,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
@@ -58,15 +59,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,    KC_BSLS,    KC_DEL,   KC_END,   KC_PGDN,
         KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,              KC_ENT,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,              KC_UP,
-        KC_LCTL,  KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT,  MO(FN1),  KC_APP,     KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT,  MO(WIN_FN),KC_APP,    KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
+
+    [WIN_FN] = LAYOUT_tkl_ansi(
+        RST_DLY,  KC_BRID,  KC_BRIU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  _______,  _______,  _______,  _______,  _______,    KC_MUTE,    _______,  _______,  _______,
+        _______,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
+        RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
+        RGB_IND,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,
+        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_ON,    _______,  _______,  _______,  _______,              _______,              _______,
+        _______,  GUI_LOCK, _______,                                _______,                                _______,  _______,  KC_RGUI,    _______,    _______,  _______,  _______),
 };
 
 // clang-format on
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [MAC_BASE] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    [FN1]  = {ENCODER_CCW_CW(KC_TRNS, KC_TRNS)},
+    [MAC_FN]  = {ENCODER_CCW_CW(KC_TRNS, KC_TRNS)},
     [WIN_BASE] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [WIN_FN]  = {ENCODER_CCW_CW(KC_TRNS, KC_TRNS)},
 };
 #endif // ENCODER_MAP_ENABLE
 
