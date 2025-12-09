@@ -46,12 +46,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,  KC_LOPTN, KC_LCMMD,                               KC_SPC,                                 KC_RCMMD, MO(MAC_FN),KC_ROPTN,  KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAC_FN] = LAYOUT_tkl_ansi(
-        RST_DLY,  KC_BRID,  KC_BRIU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  _______,  _______,  _______,  _______,  _______,    KC_MUTE,    _______,  _______,  _______,
-        _______,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
-        RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
-        RGB_IND,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,
-        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_ON,    _______,  _______,  _______,  _______,              _______,              _______,
-        _______,  GUI_LOCK, _______,                                _______,                                _______,  _______,  KC_RGUI,    _______,    _______,  _______,  _______),
+        RST_DLY,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  RGB_HUI,  RGB_SAI,  RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_SPI,    KC_MUTE,    _______,  _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
+        RGB_IND,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,
+        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_ON,    _______,  _______,  _______,  _______,              _______,              KC_BRIU,
+        _______,  GUI_LOCK, _______,                                _______,                                _______,  _______,  KC_RGUI,    _______,    _______,  KC_BRID,  _______),
 
     [WIN_BASE] = LAYOUT_tkl_ansi(
         KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,     KC_MPLY,    KC_PSCR,  KC_SCRL,  KC_BRK,
@@ -62,12 +62,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,  KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT,  MO(WIN_FN),KC_APP,    KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [WIN_FN] = LAYOUT_tkl_ansi(
-        RST_DLY,  KC_BRID,  KC_BRIU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  _______,  _______,  _______,  _______,  _______,    KC_MUTE,    _______,  _______,  _______,
-        _______,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
-        RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
-        RGB_IND,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,
-        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_ON,    _______,  _______,  _______,  _______,              _______,              _______,
-        _______,  GUI_LOCK, _______,                                _______,                                _______,  _______,  KC_RGUI,    _______,    _______,  _______,  _______),
+        RST_DLY,  BT_HST1,  BT_HST2,  BT_HST3,  P2P4G,    _______,  _______,  RGB_HUI,  RGB_SAI,  RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_SPI,    KC_MUTE,    _______,  _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    KC_MPLY,  KC_MUTE,  KC_VOLU,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_OFF,   _______,  _______,  _______,    _______,    KC_MPRV,  KC_MNXT,  KC_VOLD,
+        RGB_IND,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,
+        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_ON,    _______,  _______,  _______,  _______,              _______,              KC_BRIU,
+        _______,  GUI_LOCK, _______,                                _______,                                _______,  _______,  KC_RGUI,    _______,    _______,  KC_BRID,  _______),
 };
 
 // clang-format on
