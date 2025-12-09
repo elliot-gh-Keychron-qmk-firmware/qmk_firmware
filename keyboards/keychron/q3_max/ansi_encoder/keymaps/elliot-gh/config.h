@@ -30,7 +30,7 @@
 #define QMK_KEYS_PER_SCAN 12
 
 #undef DEBOUNCE
-#define DEBOUNCE 5
+#define DEBOUNCE 3
 
 #define RGB_MATRIX_SLEEP
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CUSTOM_indicator_only
